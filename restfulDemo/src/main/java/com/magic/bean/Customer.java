@@ -1,5 +1,6 @@
 package com.magic.bean;
 
+import javax.ws.rs.FormParam;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -11,10 +12,11 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class Customer {
+	@FormParam ("id")
 	private String id;
-
+	@FormParam ("name")
 	private String name;
-
+	@FormParam ("age")
 	private Integer age;
 
 	public Customer(String id, String name, Integer age) {
